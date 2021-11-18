@@ -13,6 +13,9 @@ public class StampaNumeriDispari {
 		System.out.print("Enter array length: ");
 		int position = in.nextInt();
 		int[] userArray = new int[position];
+		int oddNumbers = 0;
+		int evenNumbers = 0;
+		int sum = 0;
 		
 		for (int i = 0; i < userArray.length; i++) {
 			
@@ -22,11 +25,17 @@ public class StampaNumeriDispari {
 				
 				System.out.println("Odd numbers: ");
 				System.out.println(userArray[i]);
+				oddNumbers += 1;
 			} else if (userArray[i] % 2 == 1) {
 				
 				System.out.println(userArray[i]);
+				oddNumbers += 1;
 			}
 		}
+		
+		evenNumbers = userArray.length - oddNumbers;
+		System.out.println("Odd numbers: " + oddNumbers);
+		System.out.println("Even numbers: " + evenNumbers);
 		
 		in.close();
 	}
