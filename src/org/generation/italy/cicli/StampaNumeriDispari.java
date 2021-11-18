@@ -21,6 +21,11 @@ public class StampaNumeriDispari {
 			
 			userArray[i] = r.nextInt(100);
 			
+			if ((userArray[i] > 10) && (userArray[i] < 50)) {
+				
+				sum += userArray[i];
+			}
+			
 			if (((userArray[i] % 2) != 0) && (i == 0)) {
 				
 				System.out.println("Odd numbers: ");
@@ -30,12 +35,16 @@ public class StampaNumeriDispari {
 				
 				System.out.println(userArray[i]);
 				oddNumbers += 1;
+			} else {
+				
+				evenNumbers += 1;
 			}
 		}
 		
-		evenNumbers = userArray.length - oddNumbers;
+		//evenNumbers = userArray.length - oddNumbers;
 		System.out.println("Odd numbers: " + oddNumbers);
 		System.out.println("Even numbers: " + evenNumbers);
+		System.out.println("Sum of numbers between 10 and 50: " + sum);
 		
 		in.close();
 	}
